@@ -1,0 +1,497 @@
+
+{"level":"info","timestamp":"2019-03-30T10:18:55.311+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-03-30T10:18:55.312+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-03-30T10:44:32.000+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-03-30T10:44:32.001+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.193+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_14","caller":"infra/worker.go:33","message":"%s is closedworker_14"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_15","caller":"infra/worker.go:33","message":"%s is closedworker_15"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_1","caller":"infra/worker.go:33","message":"%s is closedworker_1"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_17","caller":"infra/worker.go:33","message":"%s is closedworker_17"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_0","caller":"infra/worker.go:33","message":"%s is closedworker_0"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_3","caller":"infra/worker.go:33","message":"%s is closedworker_3"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_4","caller":"infra/worker.go:33","message":"%s is closedworker_4"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_18","caller":"infra/worker.go:33","message":"%s is closedworker_18"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_16","caller":"infra/worker.go:33","message":"%s is closedworker_16"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_11","caller":"infra/worker.go:33","message":"%s is closedworker_11"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_2","caller":"infra/worker.go:33","message":"%s is closedworker_2"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_10","caller":"infra/worker.go:33","message":"%s is closedworker_10"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_19","caller":"infra/worker.go:33","message":"%s is closedworker_19"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_9","caller":"infra/worker.go:33","message":"%s is closedworker_9"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_6","caller":"infra/worker.go:33","message":"%s is closedworker_6"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_13","caller":"infra/worker.go:33","message":"%s is closedworker_13"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_7","caller":"infra/worker.go:33","message":"%s is closedworker_7"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_5","caller":"infra/worker.go:33","message":"%s is closedworker_5"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_12","caller":"infra/worker.go:33","message":"%s is closedworker_12"}
+{"level":"info","timestamp":"2019-04-01T15:40:08.194+0800","logger":"infra.worker_8","caller":"infra/worker.go:33","message":"%s is closedworker_8"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.857+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.858+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_10","caller":"infra/worker.go:33","message":"%s is closedworker_10"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_11","caller":"infra/worker.go:33","message":"%s is closedworker_11"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_17","caller":"infra/worker.go:33","message":"%s is closedworker_17"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_14","caller":"infra/worker.go:33","message":"%s is closedworker_14"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_13","caller":"infra/worker.go:33","message":"%s is closedworker_13"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_5","caller":"infra/worker.go:33","message":"%s is closedworker_5"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_15","caller":"infra/worker.go:33","message":"%s is closedworker_15"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_19","caller":"infra/worker.go:33","message":"%s is closedworker_19"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_9","caller":"infra/worker.go:33","message":"%s is closedworker_9"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_3","caller":"infra/worker.go:33","message":"%s is closedworker_3"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_8","caller":"infra/worker.go:33","message":"%s is closedworker_8"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_1","caller":"infra/worker.go:33","message":"%s is closedworker_1"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_7","caller":"infra/worker.go:33","message":"%s is closedworker_7"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_4","caller":"infra/worker.go:33","message":"%s is closedworker_4"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_6","caller":"infra/worker.go:33","message":"%s is closedworker_6"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_0","caller":"infra/worker.go:33","message":"%s is closedworker_0"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_12","caller":"infra/worker.go:33","message":"%s is closedworker_12"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_2","caller":"infra/worker.go:33","message":"%s is closedworker_2"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_18","caller":"infra/worker.go:33","message":"%s is closedworker_18"}
+{"level":"info","timestamp":"2019-04-01T15:40:33.859+0800","logger":"infra.worker_16","caller":"infra/worker.go:33","message":"%s is closedworker_16"}
+{"level":"info","timestamp":"2019-04-01T15:42:18.534+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-01T15:42:18.535+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T15:53:01.966+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-01T15:53:01.966+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T16:00:51.904+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-01T16:00:51.905+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T17:04:36.772+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"safsa@123.com\",\"password\":\"1111111111111\"}}"}
+{"level":"info","timestamp":"2019-04-01T17:04:36.782+0800","logger":"infra.worker_7","caller":"runtime/panic.go:522","message":"%s is closedworker_7"}
+{"level":"info","timestamp":"2019-04-01T17:06:12.070+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-01T17:06:12.071+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-01T17:06:21.946+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"safsa@123.com\",\"password\":\"1111111111111\"}}"}
+{"level":"info","timestamp":"2019-04-01T17:06:21.950+0800","logger":"infra.worker_4","caller":"runtime/panic.go:522","message":"%s is closedworker_4"}
+{"level":"info","timestamp":"2019-04-02T09:12:17.696+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T09:12:17.697+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T09:18:32.954+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T09:18:32.954+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T09:58:14.454+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T09:58:14.454+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T09:59:15.360+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"1@1.com\",\"password\":\"11111111\"}}"}
+{"level":"info","timestamp":"2019-04-02T09:59:15.363+0800","logger":"infra.worker_3","caller":"runtime/panic.go:522","message":"%s is closedworker_3"}
+{"level":"info","timestamp":"2019-04-02T10:25:00.315+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T10:25:00.316+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T10:25:03.639+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"1@1.com\",\"password\":\"11111111\"}}"}
+{"level":"info","timestamp":"2019-04-02T10:25:03.640+0800","logger":"infra.worker_6","caller":"runtime/panic.go:522","message":"%s is closedworker_6"}
+{"level":"info","timestamp":"2019-04-02T13:11:03.577+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T13:11:03.578+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T13:16:05.472+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"username\":\"admin1\",\"email\":\"admin@123.com1\",\"password\":\"admin\"}}"}
+{"level":"info","timestamp":"2019-04-02T13:23:38.357+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"username\":\"admin1\",\"email\":\"admin@123.com1\",\"password\":\"admin\"}}"}
+{"level":"info","timestamp":"2019-04-02T13:23:50.641+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"username\":\"admin\",\"email\":\"admin@123.com\",\"password\":\"admin\"}}"}
+{"level":"info","timestamp":"2019-04-02T13:27:35.686+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T13:27:35.686+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T13:27:43.252+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"username\":\"admin\",\"email\":\"admin@123.com\",\"password\":\"admin\"}}"}
+{"level":"info","timestamp":"2019-04-02T13:27:43.252+0800","logger":"infra.worker_8","caller":"runtime/panic.go:522","message":"%s is closedworker_8"}
+{"level":"info","timestamp":"2019-04-02T13:31:27.773+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T13:31:27.774+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T14:21:29.134+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T14:21:29.134+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T15:21:51.713+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"test@123.com\",\"password\":\"11111111\"}}"}
+{"level":"info","timestamp":"2019-04-02T15:21:51.717+0800","logger":"infra.worker_2","caller":"runtime/panic.go:522","message":"%s is closedworker_2"}
+{"level":"info","timestamp":"2019-04-02T15:32:15.233+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T15:32:15.234+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T15:49:39.741+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T15:49:39.742+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T15:55:43.949+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T15:55:43.950+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T15:57:23.931+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"gdfgd@121321.com\",\"password\":\"sdfsdfsdfsdfsdf\"}}"}
+{"level":"info","timestamp":"2019-04-02T15:57:23.932+0800","logger":"infra.worker_5","caller":"runtime/panic.go:522","message":"%s is closedworker_5"}
+{"level":"info","timestamp":"2019-04-02T16:06:00.693+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T16:06:00.694+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T16:06:27.329+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"test@123.com\",\"password\":\"1111111111\",\"username\":\"test@123.com\"}}"}
+{"level":"info","timestamp":"2019-04-02T16:08:42.765+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-02T16:08:42.766+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-02T16:09:39.399+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"test@123.com\",\"password\":\"1111111111\",\"username\":\"test@123.com\"}}"}
+{"level":"info","timestamp":"2019-04-02T16:09:39.400+0800","logger":"infra.worker_9","caller":"runtime/panic.go:522","message":"%s is closedworker_9"}
+{"level":"info","timestamp":"2019-04-03T09:26:51.967+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T09:26:51.968+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-03T09:27:21.325+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"test@123.com\",\"password\":\"1111111111\",\"username\":\"test@123.com\"}}"}
+{"level":"info","timestamp":"2019-04-03T09:27:21.325+0800","logger":"infra.worker_5","caller":"runtime/panic.go:522","message":"%s is closedworker_5"}
+{"level":"info","timestamp":"2019-04-03T09:44:58.631+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T09:44:58.631+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-03T09:45:04.658+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"test@123.com\",\"password\":\"1111111111\",\"username\":\"test@123.com\"}}"}
+{"level":"info","timestamp":"2019-04-03T09:45:04.659+0800","logger":"infra.worker_0","caller":"runtime/panic.go:522","message":"%s is closedworker_0"}
+{"level":"info","timestamp":"2019-04-03T09:46:38.677+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T09:46:38.678+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-03T09:46:51.220+0800","logger":"infra.user","caller":"infra/userinfo.go:37","message":"user: recv req: {\"user\":{\"email\":\"test@123.com\",\"password\":\"1111111111\",\"username\":\"test@123.com\"}}"}
+{"level":"info","timestamp":"2019-04-03T09:46:51.222+0800","logger":"infra.worker_7","caller":"runtime/panic.go:522","message":"%s is closedworker_7"}
+{"level":"info","timestamp":"2019-04-03T09:55:08.188+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T09:55:08.189+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-03T10:13:44.830+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T10:13:44.831+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-03T10:24:20.565+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T10:24:20.565+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"debug","timestamp":"2019-04-03T10:24:39.172+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user","method":"OPTIONS","path":"/api/user","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:24:39.172+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user","status":200,"method":"OPTIONS","path":"/api/user","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.772+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"OPTIONS","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.773+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":200,"method":"OPTIONS","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.780+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.780+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.833+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.833+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.836+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:25:30.836+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:25:56.325+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"OPTIONS","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:25:56.325+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"OPTIONS","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:25:56.333+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:25:56.333+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":422,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:26:03.967+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:26:04.055+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":87}
+{"level":"debug","timestamp":"2019-04-03T10:26:04.066+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:26:04.066+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:26:20.859+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user","method":"OPTIONS","path":"/api/user","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:26:20.859+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user","status":200,"method":"OPTIONS","path":"/api/user","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:33:35.739+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"OPTIONS","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:33:35.739+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"OPTIONS","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:33:35.744+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:33:35.832+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":87}
+{"level":"debug","timestamp":"2019-04-03T10:33:35.845+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:33:35.845+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:39:26.356+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:39:26.358+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-03T10:40:15.948+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:40:16.039+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":91}
+{"level":"debug","timestamp":"2019-04-03T10:40:16.050+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/:test","method":"OPTIONS","path":"/api/profiles/:test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:40:16.050+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/:test","status":200,"method":"OPTIONS","path":"/api/profiles/:test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"info","timestamp":"2019-04-03T10:41:47.279+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-03T10:41:47.279+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"debug","timestamp":"2019-04-03T10:42:46.521+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:42:46.521+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:43:00.196+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:43:00.284+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":87}
+{"level":"debug","timestamp":"2019-04-03T10:43:00.295+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/:test","method":"OPTIONS","path":"/api/profiles/:test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:43:00.295+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/:test","status":200,"method":"OPTIONS","path":"/api/profiles/:test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:44:20.388+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:44:20.388+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:44:43.741+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"OPTIONS","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:44:43.741+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"OPTIONS","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:44:43.748+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:44:43.842+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":94}
+{"level":"debug","timestamp":"2019-04-03T10:44:43.852+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:44:43.852+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:58:24.915+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:58:24.916+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.767+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"OPTIONS","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.767+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":200,"method":"OPTIONS","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.775+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.775+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:00.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:59:18.654+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:18.655+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-03T10:59:18.657+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:18.657+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:59:32.707+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"OPTIONS","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:32.707+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"OPTIONS","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T10:59:32.715+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:32.801+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":86}
+{"level":"debug","timestamp":"2019-04-03T10:59:32.811+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T10:59:32.811+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-03T11:00:04.026+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T11:00:04.027+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-03T11:01:50.973+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T11:01:51.065+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":91}
+{"level":"debug","timestamp":"2019-04-03T11:01:51.077+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-03T11:01:51.077+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T09:13:28.957+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T09:13:28.958+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-04T09:13:49.754+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"OPTIONS","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T09:13:49.754+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"OPTIONS","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T09:13:49.761+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/users/login","method":"POST","path":"/api/users/login","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T09:13:49.852+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/users/login","status":200,"method":"POST","path":"/api/users/login","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":91}
+{"level":"debug","timestamp":"2019-04-04T09:13:49.864+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T09:13:49.864+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"info","timestamp":"2019-04-04T10:13:39.801+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-04T10:13:39.802+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"debug","timestamp":"2019-04-04T10:13:49.823+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:49.823+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:13:49.930+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"GET","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:49.931+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"GET","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-04T10:13:56.515+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:56.515+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:13:56.527+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:56.528+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-04T10:13:58.181+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:58.182+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:13:58.213+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:58.214+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:13:58.245+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:13:58.246+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.665+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.666+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.803+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.803+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.900+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.900+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.952+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:08.952+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:11.204+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:11.205+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:14.015+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:14.016+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:14.118+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:14.118+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:17.246+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:17.246+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:17.369+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:17.369+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:19.561+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:19.563+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":2}
+{"level":"debug","timestamp":"2019-04-04T10:14:19.608+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:19.608+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:14:19.629+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:14:19.629+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:30.821+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:30.823+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":2}
+{"level":"debug","timestamp":"2019-04-04T10:15:30.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:30.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:34.681+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:34.681+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:34.828+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:34.828+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:34.915+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:34.915+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:37.401+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:37.402+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.530+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"OPTIONS","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.531+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":200,"method":"OPTIONS","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.534+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles/feed","method":"OPTIONS","path":"/api/articles/feed","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.534+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles/feed","status":200,"method":"OPTIONS","path":"/api/articles/feed","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.548+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.548+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.552+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles/feed","method":"GET","path":"/api/articles/feed","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:44.553+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles/feed","status":404,"method":"GET","path":"/api/articles/feed","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:48.380+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:48.381+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:15:48.399+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:15:48.399+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:16:24.849+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:16:24.850+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:23:57.590+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:23:57.596+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles/feed","method":"GET","path":"/api/articles/feed","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:23:57.605+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles/feed","status":404,"method":"GET","path":"/api/articles/feed","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":8}
+{"level":"debug","timestamp":"2019-04-04T10:23:57.605+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":14}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.181+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/user/","method":"OPTIONS","path":"/api/user/","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.181+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/user/","status":200,"method":"OPTIONS","path":"/api/user/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.260+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"OPTIONS","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.261+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":200,"method":"OPTIONS","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.265+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles/feed","method":"OPTIONS","path":"/api/articles/feed","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.265+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles/feed","status":200,"method":"OPTIONS","path":"/api/articles/feed","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.289+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.289+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.290+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles/feed","method":"GET","path":"/api/articles/feed","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:02.290+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles/feed","status":404,"method":"GET","path":"/api/articles/feed","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.620+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.620+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.630+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.631+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.651+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.651+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.664+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:03.664+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:09.368+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:09.369+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:16.485+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/tags","method":"GET","path":"/api/tags","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:16.486+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/tags","status":404,"method":"GET","path":"/api/tags","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:16.489+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles/feed","method":"GET","path":"/api/articles/feed","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:16.489+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles/feed","status":404,"method":"GET","path":"/api/articles/feed","query":"limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:17.287+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:17.288+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:19.665+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:19.665+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:19.679+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:19.679+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:24:29.648+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:24:29.649+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.506+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"OPTIONS","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.508+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"OPTIONS","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":1}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.515+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/profiles/test","method":"GET","path":"/api/profiles/test","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.517+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/profiles/test","status":200,"method":"GET","path":"/api/profiles/test","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":2}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.568+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"OPTIONS","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.568+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":200,"method":"OPTIONS","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.579+0800","logger":"infra.gin","caller":"utils/ginzap.go:22","message":"/api/articles","method":"GET","path":"/api/articles","ip":"::1"}
+{"level":"debug","timestamp":"2019-04-04T10:35:46.580+0800","logger":"infra.gin","caller":"utils/ginzap.go:41","message":"/api/articles","status":404,"method":"GET","path":"/api/articles","query":"author=test&limit=10&offset=0","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36","latency":0}
+{"level":"info","timestamp":"2019-04-04T10:40:38.591+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-04T10:40:38.592+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-04-08T09:59:43.876+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-04-08T13:56:06.404+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-04-08T13:56:06.481+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"info","timestamp":"2019-04-12T16:27:08.909+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-12T16:27:08.910+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-04-12T16:27:12.794+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-04-12T16:27:18.583+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"info","timestamp":"2019-04-23T17:34:02.823+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-23T17:34:02.824+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-23T17:35:27.478+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-23T17:35:27.478+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-23T17:36:41.067+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-23T17:36:41.068+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-23T17:37:26.299+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-23T17:37:26.300+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T09:56:34.807+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T09:56:34.808+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T10:09:09.929+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T10:09:09.930+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T10:10:53.576+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T10:10:53.576+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T10:20:10.776+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T10:20:10.776+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:05:45.214+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:05:45.215+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:06:09.039+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:06:09.040+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:11:55.814+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:11:55.815+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:12:29.123+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:12:29.123+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:15:28.136+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:15:28.136+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:15:51.095+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:15:51.095+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:16:42.935+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:16:42.935+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:19:09.281+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:19:09.282+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:19:57.987+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:19:57.988+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T11:31:55.668+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T11:31:55.669+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:07:23.027+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:07:23.028+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:08:56.504+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:08:56.505+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:11:11.886+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:11:11.886+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:18:29.552+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:18:29.552+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:22:09.134+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:22:09.134+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:23:46.483+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:23:46.484+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:24:25.017+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:24:25.018+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T14:24:56.739+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T14:24:56.740+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-24T15:54:06.972+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-24T15:54:06.974+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-25T16:24:50.662+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-25T16:24:50.662+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T10:40:41.044+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T10:40:41.045+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T10:42:06.837+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T10:42:06.838+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T10:45:21.069+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T10:45:21.069+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T10:46:15.890+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T10:46:15.891+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T10:57:59.781+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T10:57:59.781+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T14:37:14.390+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T14:37:14.391+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T17:03:28.128+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T17:03:28.129+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T17:27:06.528+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T17:27:06.528+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-04-26T17:32:21.455+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"info","timestamp":"2019-04-26T17:33:29.321+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T17:33:29.322+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T17:34:53.170+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T17:34:53.172+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-26T17:45:54.546+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-26T17:45:54.547+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-28T11:06:39.330+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-28T11:06:39.331+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-28T14:32:58.681+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-28T14:32:58.682+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-04-29T14:57:57.412+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-04-29T14:57:57.413+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-04-29T14:59:10.540+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-05T09:43:04.435+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-05T09:43:04.480+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-06T16:19:51.150+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-06T16:19:51.150+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-13T09:05:30.209+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-13T09:05:38.003+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-13T10:32:57.829+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T11:14:12.075+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-13T11:23:25.922+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T11:23:43.777+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T13:55:00.173+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:07:24.802+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:07:29.354+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:09:05.953+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:43:36.607+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:43:39.091+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:44:38.650+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:48:43.514+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:48:47.125+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T14:50:07.931+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:22:37.107+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:23:01.214+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:23:04.047+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:26:17.474+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:26:22.656+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:26:50.946+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:27:23.266+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:28:37.144+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:28:56.728+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:29:00.112+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:29:51.258+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:30:01.262+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:30:53.230+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:32:27.926+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"no token present in request"}
+{"level":"error","timestamp":"2019-05-13T16:35:45.509+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"info","timestamp":"2019-05-14T15:42:36.605+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-14T15:42:36.606+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-14T16:00:23.536+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-14T16:00:23.537+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-15T17:22:36.476+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-15T17:22:36.478+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-16T10:42:55.120+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-16T10:42:55.120+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-16T10:45:54.818+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-16T10:45:54.818+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-16T11:09:17.466+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-16T11:09:17.467+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-16T11:10:18.468+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-16T11:10:18.469+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-16T11:13:29.092+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-16T11:13:29.093+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-16T13:42:00.212+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-16T13:42:00.213+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-05-17T09:08:44.885+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-17T09:08:48.007+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-17T09:08:59.261+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-17T09:09:06.062+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-18T09:37:47.278+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-18T09:37:53.964+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-20T09:13:17.065+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-20T09:13:22.580+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-21T10:21:03.235+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-22T09:16:52.754+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-23T09:08:46.104+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-23T09:09:23.014+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"info","timestamp":"2019-05-23T17:32:41.993+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-23T17:32:41.994+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-05-27T09:11:52.292+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-05-27T09:11:52.293+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-05-28T10:20:15.140+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-29T14:31:37.729+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-30T16:06:34.937+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-30T16:06:39.378+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-05-31T09:30:01.379+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"info","timestamp":"2019-06-07T21:04:06.860+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-06-07T21:04:06.861+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-06-07T21:05:06.664+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"info","timestamp":"2019-06-20T09:24:22.061+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-06-20T09:24:22.062+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"info","timestamp":"2019-07-09T09:58:15.712+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-07-09T09:58:15.713+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
+{"level":"error","timestamp":"2019-07-09T10:06:51.504+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-07-09T10:19:08.142+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-07-12T18:23:39.100+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-07-12T18:23:40.559+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-07-13T10:46:23.336+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"error","timestamp":"2019-07-13T10:46:29.373+0800","logger":"infra.gin","caller":"utils/ginzap.go:32","message":"Token is expired"}
+{"level":"info","timestamp":"2019-09-04T09:16:02.384+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-09-04T09:16:02.385+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}
