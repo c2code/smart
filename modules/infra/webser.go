@@ -86,6 +86,7 @@ func (m Manager) webListen() {
 
 		tuna_v7 := tuna_v2.Group("/course")
 		tuna_v7.GET("/",courses.GetCourseList)
+		tuna_v7.POST("/upload",courses.UploadCourseFile)
 
 		//tuna_v5 := tuna_v2.Group("/articles")
 	}
