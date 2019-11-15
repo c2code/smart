@@ -3,10 +3,10 @@ package courses
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	//"encoding/json"
-//	"io"
-//	"bytes"
 	"smart.com/weixin/smart/logp"
+	"os"
+	"io"
+	"bufio"
 )
 
 func GetCourseList(c *gin.Context) {
@@ -29,6 +29,7 @@ func UploadCourseFile(c *gin.Context) {
 
 	mlogger  := logp.NewLogger("courses")
 	logger := mlogger.Named("upload")
+	file_path := "/tmp/";
 	logger.Info("Begin to upload files!")
 
 	err := c.Request.ParseMultipartForm(32 << 10)  //32M
@@ -44,32 +45,44 @@ func UploadCourseFile(c *gin.Context) {
 	cid := form.Value["cid"][0]
 	files := form.File["upload"]
 
+	file_path = file_path + cid + "/";
+
+	err=os.MkdirAll(file_path ,0755)
+	if err!=nil{
+		logger.Errorf("create file path %s if fail : %+v", cid, err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
 	for i, _ := range files {
 		fileName := files[i].Filename
-		logger.Infof("cid %s of %s will create", cid, fileName)
+		logger.Infof("%s of cid=%s will create", fileName, cid)
 		file, err := files[i].Open()
 
 		defer file.Close()
-
 
 		if err != nil {
 			logger.Errorf("Open source file : %+v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{})
 			return
 		}
-/*
-		writeType := new(wire.WriteType)
-		//*writeType = wire.WriteTypeCacheThrough
-		*writeType = wire.WriteTypeThrough
 
-		id, err := m.fs.CreateFile(object+fileName, &option.CreateFile{ WriteType: writeType})
-		defer m.fs.Close(id)
+		// Open file for writing
+		newfile, err := os.OpenFile(file_path + fileName,
+			os.O_WRONLY|os.O_TRUNC|os.O_CREATE,
+			0755,
+		)
 
 		if err != nil {
 			logger.Errorf("Create destination file fail on disk: %+v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"courses": ""})
 			return
 		}
+
+		defer newfile.Close();
+
+		// Create a buffered writer from the file
+		bufferedWriter := bufio.NewWriter(newfile)
 
 		buf := make([]byte, 35*1024)
 
@@ -81,7 +94,7 @@ func UploadCourseFile(c *gin.Context) {
 				}
 			}
 
-			_, err = m.fs.Write(id, bytes.NewReader(buf))
+			_, err = bufferedWriter.Write(buf)
 
 			if err != nil {
 				logger.Errorf("Write destination file fail on disk: %+v", err)
@@ -90,7 +103,9 @@ func UploadCourseFile(c *gin.Context) {
 			}
 
 		}
-*/
+
+		bufferedWriter.Flush()
+
 	}
 	c.JSON(http.StatusOK, gin.H{"courses": ""})
 }
