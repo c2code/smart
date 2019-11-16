@@ -19,6 +19,7 @@ type CourseModel struct {
 	PID          uint    `gorm:"column:parentid"`
 	Name         string  `gorm:"column:name"`
 	Desc         string  `gorm:"column:description;size:1024"`
+	Vedio        string  `gorm:"column:vedio"`
 }
 
 type HomeworkModel struct {

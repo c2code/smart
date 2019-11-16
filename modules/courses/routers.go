@@ -7,6 +7,9 @@ import (
 	"os"
 	"io"
 	"bufio"
+	"smart.com/weixin/smart/utils"
+	"net/url"
+	"path"
 )
 
 func GetCourseList(c *gin.Context) {
@@ -15,7 +18,7 @@ func GetCourseList(c *gin.Context) {
 	coursemodel := GetCourseModel()
 
 	for _, tmp := range coursemodel {
-		course := CoursesModelValidator {CourseID:tmp.CourseID, PID:tmp.PID, Name:tmp.Name, Desc:tmp.Desc}
+		course := CoursesModelValidator {CourseID:tmp.CourseID, PID:tmp.PID, Name:tmp.Name, Desc:tmp.Desc, Vedio:tmp.Vedio}
 
 		courselist = append(courselist, course)
 	}
@@ -44,6 +47,7 @@ func UploadCourseFile(c *gin.Context) {
 
 	cid := form.Value["cid"][0]
 	files := form.File["upload"]
+	fileName := ""
 
 	file_path = file_path + cid + "/";
 
@@ -55,7 +59,7 @@ func UploadCourseFile(c *gin.Context) {
 	}
 
 	for i, _ := range files {
-		fileName := files[i].Filename
+		fileName = files[i].Filename
 		logger.Infof("%s of cid=%s will create", fileName, cid)
 		file, err := files[i].Open()
 
@@ -98,14 +102,53 @@ func UploadCourseFile(c *gin.Context) {
 
 			if err != nil {
 				logger.Errorf("Write destination file fail on disk: %+v", err)
-				c.JSON(http.StatusInternalServerError, gin.H{"courses": ""})
+				c.JSON(http.StatusInternalServerError, gin.H{})
 				return
 			}
 
 		}
 
 		bufferedWriter.Flush()
-
 	}
-	c.JSON(http.StatusOK, gin.H{"courses": ""})
+
+	var courseModel CourseModel
+
+	db := utils.GetDB()
+	courseModel = CourseModel{}
+	db.First(&courseModel, "courseid = ?", cid)
+	db.Model(&courseModel).Update("vedio", fileName)
+
+	c.JSON(http.StatusOK, gin.H{})
+}
+
+func ReadCourseFile (c *gin.Context)  {
+	mlogger  := logp.NewLogger("courses")
+	logger := mlogger.Named("readfile")
+	file_path := "/tmp/";
+	logger.Info("Begin to read files!")
+
+	cid := c.Query("cid")
+	fileName := c.Query("file_name")
+
+	file_path = file_path + cid + "/" + fileName
+
+	c.Header("Content-Disposition", "attachment; filename="+url.QueryEscape(path.Base(file_path)))
+
+	file, err := os.OpenFile(file_path, os.O_RDONLY, 0666)
+	defer file.Close()
+
+	if err != nil {
+		logger.Errorf("open file fail on disk: %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	c.Header("Content-Type", "video/mp4")
+
+	c.Stream(func(w io.Writer) bool {
+		io.Copy(w, file)
+		return false
+	})
+
+	return
 }

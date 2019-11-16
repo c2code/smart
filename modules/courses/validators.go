@@ -8,6 +8,7 @@ type CoursesModelValidator struct {
 	PID          uint    `json:"pid"`
 	Name         string  `json:"cname"`
 	Desc         string  `json:"cdes"`
+	Vedio        string  `json:"cvedio"`
 }
 
 
