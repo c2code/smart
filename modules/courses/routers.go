@@ -33,7 +33,7 @@ func UploadCourseFile(c *gin.Context) {
 	mlogger  := logp.NewLogger("courses")
 	logger := mlogger.Named("upload")
 	file_path := "/tmp/";
-	logger.Info("Begin to upload files!")
+	//logger.Info("Begin to upload files!")
 
 	err := c.Request.ParseMultipartForm(32 << 10)  //32M
 
@@ -125,7 +125,7 @@ func ReadCourseFile (c *gin.Context)  {
 	mlogger  := logp.NewLogger("courses")
 	logger := mlogger.Named("readfile")
 	file_path := "/tmp/";
-	logger.Info("Begin to read files!")
+	//logger.Info("Begin to read files!")
 
 	cid := c.Query("cid")
 	fileName := c.Query("file_name")
