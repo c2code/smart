@@ -19,7 +19,7 @@ func GetCourseList(c *gin.Context) {
 	coursemodel := GetCourseModel()
 
 	for _, tmp := range coursemodel {
-		course := CoursesModelValidator {CourseID:tmp.CourseID, PID:tmp.PID, Name:tmp.Name, Desc:tmp.Desc, Vedio:tmp.Vedio}
+		course := CoursesModelValidator {CourseID:tmp.CourseID, PID:tmp.PID, Name:tmp.Name, Desc:tmp.Desc, Vedio:tmp.Vedio, CourseLevel:tmp.CourseLevel}
 
 		courselist = append(courselist, course)
 	}
@@ -173,13 +173,12 @@ func ModifyCourse (c *gin.Context)  {
 		return
 	}
 
-	logger.Infof("the cid is %d, the name is %s , the desc is %s",inReq.CourseID, inReq.Name, inReq.Desc)
+	logger.Infof("the cid is %d, the name is %s , the desc is %s, the course level is %s",inReq.CourseID, inReq.Name, inReq.Desc, inReq.CourseLevel)
 
 	var courseModel CourseModel
 	db := utils.GetDB()
 	courseModel = CourseModel{}
 	db.First(&courseModel, "courseid = ?", inReq.CourseID)
-	db.Model(&courseModel).Update("name", inReq.Name, "description", inReq.Desc)
-
+	db.Model(&courseModel).Updates(map[string]interface{}{"name":inReq.Name, "description":inReq.Desc, "clevel":inReq.CourseLevel})
 	c.JSON(http.StatusOK, gin.H{})
 }

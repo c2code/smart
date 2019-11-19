@@ -20,6 +20,7 @@ type CourseModel struct {
 	Name         string  `gorm:"column:name"`
 	Desc         string  `gorm:"column:description;size:1024"`
 	Vedio        string  `gorm:"column:vedio"`
+	CourseLevel  string  `gorm:"column:clevel"`
 }
 
 type HomeworkModel struct {
