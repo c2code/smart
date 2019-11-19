@@ -10,6 +10,7 @@ import (
 	"smart.com/weixin/smart/utils"
 	"net/url"
 	"path"
+	"encoding/json"
 )
 
 func GetCourseList(c *gin.Context) {
@@ -151,4 +152,34 @@ func ReadCourseFile (c *gin.Context)  {
 	})
 
 	return
+}
+
+func ModifyCourse (c *gin.Context)  {
+	mlogger  := logp.NewLogger("courses")
+	logger := mlogger.Named("modify")
+
+	body, err := c.GetRawData()
+	if err != nil {
+		logger.Errorf("get raw data fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	var inReq CoursesModelValidator
+	err = json.Unmarshal(body, &inReq)
+	if err != nil {
+		logger.Errorf("unmarshal fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	logger.Infof("the cid is %d, the name is %s , the desc is %s",inReq.CourseID, inReq.Name, inReq.Desc)
+
+	var courseModel CourseModel
+	db := utils.GetDB()
+	courseModel = CourseModel{}
+	db.First(&courseModel, "courseid = ?", inReq.CourseID)
+	db.Model(&courseModel).Update("name", inReq.Name, "description", inReq.Desc)
+
+	c.JSON(http.StatusOK, gin.H{})
 }
