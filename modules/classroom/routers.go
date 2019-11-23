@@ -6,10 +6,25 @@ import (
 	"encoding/json"
 	"smart.com/weixin/smart/logp"
 	"smart.com/weixin/smart/utils"
+	"time"
 )
 
+func GetLastClassroom (c *gin.Context) {
+	mlogger  := logp.NewLogger("classroom")
+	logger := mlogger.Named("getlast")
+
+
+	var classroom ClassroomRe = ClassroomRe{}
+	var classroommodel ClassroomModel
+	db := utils.GetDB()
+	db.Last(&classroommodel)
+	logger.Infof("get the last room id is %d",classroommodel.RoomID)
+	classroom.RoomID = classroommodel.RoomID
+	c.JSON(http.StatusOK, gin.H{"classroom":classroom})
+}
+
 func GetClassroomList(c *gin.Context) {
-	mlogger  := logp.NewLogger("classromm")
+	mlogger  := logp.NewLogger("classroom")
 	logger := mlogger.Named("getlist")
 
 	body, err := c.GetRawData()
@@ -68,7 +83,8 @@ func AddClassroom(c *gin.Context) {
 		return
 	}
 
-	logger.Infof("the classroom id is %d, the name is %d, the name is %s , the desc is %s, the course level is %s",inReq.RoomID, inReq.Name)
+	logger.Infof("the classroom id is %d, the name is %s ",inReq.RoomID, inReq.Name)
+
 
 	var classroomModel ClassroomModel
 	classroomModel.RoomID     = inReq.RoomID
@@ -76,7 +92,7 @@ func AddClassroom(c *gin.Context) {
 	classroomModel.Desc       = inReq.Desc
 	classroomModel.StudentNum = 0
 	classroomModel.Status     = inReq.Status
-	classroomModel.Start      = inReq.Start
+	classroomModel.Start      = time.Now().Format("2006-01-02 15:04:05")
 	classroomModel.End        = ""
 	classroomModel.CourseID   = inReq.CourseID
 	classroomModel.TeacherID  = inReq.TeacherID
