@@ -47,8 +47,8 @@ func AutoMigrate() {
 	db := utils.GetDB()
 
 	db.AutoMigrate(&CourseModel{})
-	db.AutoMigrate(&HomeworkModel{})
-	db.AutoMigrate(&CourseUserModel{})
+	//db.AutoMigrate(&HomeworkModel{})
+	//db.AutoMigrate(&CourseUserModel{})
 }
 
 func SaveOne(data interface{}) error {
@@ -106,8 +106,10 @@ func InitCouses() {
 		courseModel.PID      = course.PID
 		courseModel.Name     = course.Name
 		courseModel.Desc     = course.Desc
+		courseModel.Vedio    = course.Vedio
+		courseModel.CourseLevel = course.CourseLevel
 		if err := SaveOne(&courseModel); err != nil {
-			fmt.Printf("database err:%+v", err)
+			fmt.Printf("database err:%+v \n", err)
 			continue
 		}
 	}
@@ -119,9 +121,10 @@ func InitCouses() {
 func GetCourseModel() []CourseModel{
 	var courselist []CourseModel
 	db := utils.GetDB()
-	tx := db.Begin()     //开启事物处理
-	tx.Where(CourseModel{}).Offset(0).Limit(10000).Find(&courselist) //获取course_models表中的前10000条数据
-	tx.Commit()         //结束事物处理
+	//tx := db.Begin()     //开启事物处理
+	//tx.Where(CourseModel{}).Offset(0).Limit(10000).Find(&courselist) //获取course_models表中的前10000条数据
+	//tx.Commit()         //结束事物处理
+	db.Find(&courselist)
 	return courselist
 }
 

@@ -11,6 +11,7 @@ import (
 	"smart.com/weixin/smart/modules/users"
 	"github.com/gin-gonic/gin"
 	"smart.com/weixin/smart/modules/courses"
+	"smart.com/weixin/smart/modules/classroom"
 )
 
 
@@ -117,6 +118,8 @@ func (m Manager) dispatch() {
 func (m Manager) Migrate(db *gorm.DB) {
 	users.AutoMigrate()
 	courses.AutoMigrate()
+	classroom.AutoMigrate()
+
 	/*db.AutoMigrate(&articles.ArticleModel{})
 	db.AutoMigrate(&articles.TagModel{})
 	db.AutoMigrate(&articles.FavoriteModel{})

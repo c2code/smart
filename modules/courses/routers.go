@@ -182,3 +182,73 @@ func ModifyCourse (c *gin.Context)  {
 	db.Model(&courseModel).Updates(map[string]interface{}{"name":inReq.Name, "description":inReq.Desc, "clevel":inReq.CourseLevel})
 	c.JSON(http.StatusOK, gin.H{})
 }
+
+func AddCourse (c *gin.Context)  {
+	mlogger  := logp.NewLogger("courses")
+	logger := mlogger.Named("add")
+
+	body, err := c.GetRawData()
+	if err != nil {
+		logger.Errorf("get raw data fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	var inReq CoursesModelValidator
+	err = json.Unmarshal(body, &inReq)
+	if err != nil {
+		logger.Errorf("unmarshal fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	logger.Infof("the cid is %d, the PID is %d, the name is %s , the desc is %s, the course level is %s",inReq.CourseID, inReq.PID, inReq.Name, inReq.Desc, inReq.CourseLevel)
+
+	var courseModel CourseModel
+	courseModel.CourseID = inReq.CourseID
+	courseModel.PID      = inReq.PID
+	courseModel.Name     = inReq.Name
+	courseModel.Desc     = inReq.Desc
+	courseModel.Vedio    = inReq.Vedio
+	courseModel.CourseLevel = inReq.CourseLevel
+	db := utils.GetDB()
+	err = db.Save(&courseModel).Error
+	if err != nil {
+		logger.Errorf("save data fail %+v", err)
+	}
+
+	c.JSON(http.StatusOK, gin.H{})
+}
+
+func DeleteCourse (c *gin.Context)  {
+	mlogger  := logp.NewLogger("courses")
+	logger := mlogger.Named("delete")
+
+	body, err := c.GetRawData()
+	if err != nil {
+		logger.Errorf("get raw data fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	var inReq CoursesModelValidator
+	err = json.Unmarshal(body, &inReq)
+	if err != nil {
+		logger.Errorf("unmarshal fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	logger.Infof("the cid is %d, the name is %s , the desc is %s, the course level is %s will be delete",inReq.CourseID, inReq.Name, inReq.Desc, inReq.CourseLevel)
+
+	var courseModel CourseModel
+	courseModel.CourseID = inReq.CourseID
+	courseModel.PID      = inReq.PID
+	courseModel.Name     = inReq.Name
+	courseModel.Desc     = inReq.Desc
+	courseModel.CourseLevel = inReq.CourseLevel
+	db := utils.GetDB()
+	db.Unscoped().Where("courseid = ?", inReq.CourseID).Delete(CourseModel{})
+
+	c.JSON(http.StatusOK, gin.H{})
+}
