@@ -7,19 +7,34 @@ import (
 	"smart.com/weixin/smart/logp"
 	"smart.com/weixin/smart/utils"
 	"time"
+	"strconv"
 )
 
-func GetLastClassroom (c *gin.Context) {
-	mlogger  := logp.NewLogger("classroom")
+func GetClassroom (c *gin.Context) {
+	mlogger := logp.NewLogger("classroom")
 	logger := mlogger.Named("getlast")
 
+	roomid := c.Query("rid")
 
 	var classroom ClassroomRe = ClassroomRe{}
 	var classroommodel ClassroomModel
 	db := utils.GetDB()
-	db.Last(&classroommodel)
+
+	if (roomid == "") {
+		db.Last(&classroommodel)
+	} else {
+		rid,_ := strconv.Atoi(roomid)
+		db.Where("roomid = ?", rid).Find(&classroommodel)
+	}
+
 	logger.Infof("get the last room id is %d",classroommodel.RoomID)
 	classroom.RoomID = classroommodel.RoomID
+	classroom.Name   = classroommodel.Name
+	classroom.Desc   = classroommodel.Desc
+	classroom.Status = classroommodel.Status
+	classroom.TeacherID = classroommodel.TeacherID
+	classroom.Start     = classroommodel.Start
+	classroom.CourseID  = classroommodel.CourseID
 	c.JSON(http.StatusOK, gin.H{"classroom":classroom})
 }
 
@@ -158,6 +173,6 @@ func ModifyClassroom(c *gin.Context) {
 	db := utils.GetDB()
 	classroomModel = ClassroomModel{}
 	db.First(&classroomModel, "roomid = ?", inReq.RoomID)
-	db.Model(&classroomModel).Updates(map[string]interface{}{"name":inReq.Name, "description":inReq.Desc, "status":inReq.Status, "teacherid":inReq.TeacherID})
+	db.Model(&classroomModel).Updates(map[string]interface{}{"name":inReq.Name, "description":inReq.Desc, "status":inReq.Status, "teacherid":inReq.TeacherID, "studentnumber":inReq.StudentNum, "end":inReq.End})
 	c.JSON(http.StatusOK, gin.H{})
 }

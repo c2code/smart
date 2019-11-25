@@ -94,7 +94,7 @@ func (m Manager) webListen() {
 		tuna_v7.POST("/delete",courses.DeleteCourse)
 
 		tuna_v8 := tuna_v2.Group("/classroom")
-		tuna_v8.GET("/",classroom.GetLastClassroom)
+		tuna_v8.GET("/",classroom.GetClassroom)
 		tuna_v8.POST("/",classroom.GetClassroomList)
 		tuna_v8.POST("/add",classroom.AddClassroom)
 		tuna_v8.POST("/modify",classroom.ModifyClassroom)
