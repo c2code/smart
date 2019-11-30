@@ -20,6 +20,15 @@ type UserModelValidator struct {
 	userModel UserModel `json:"-"`
 }
 
+type UserRe struct {
+	ID       uint   `json:"uid"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
+	Bio      string `json:"bio"`
+	Image    string `json:"image"`
+	Phone    string `json:"phone"`
+}
+
 // There are some difference when you create or update a model, you need to fill the DataModel before
 // update so that you can use your origin data to cheat the validator.
 // BTW, you can put your general binding logic here such as setting password.

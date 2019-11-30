@@ -132,3 +132,25 @@ func UserUpdate(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"user": serializer.Response()})
 }
 
+func UserList (c *gin.Context) {
+
+	name := c.Query("name")
+
+	db := utils.GetDB()
+	users := []UserModel{}
+	userlist := []UserRe{}
+	db.Where("username LIKE ?", "%"+name+"%").Find(&users)
+
+	for _, tmp := range users {
+		myuser := UserRe{
+			ID:tmp.ID,
+			Username:tmp.Username,
+			Email:tmp.Email,
+			Phone:""}
+
+		userlist = append(userlist, myuser)
+	}
+
+	c.JSON(http.StatusOK, gin.H{"users": userlist})
+}
+

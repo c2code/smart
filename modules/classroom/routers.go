@@ -140,7 +140,7 @@ func DeleteClassroom(c *gin.Context) {
 		return
 	}
 
-	logger.Infof("the room id is %d, the name is %s will be delete",inReq.CourseID, inReq.Name)
+	logger.Infof("the room id is %d, the name is %s will be delete",inReq.RoomID, inReq.Name)
 
 	db := utils.GetDB()
 	db.Unscoped().Where("roomid = ?", inReq.RoomID).Delete(ClassroomModel{})
@@ -173,6 +173,6 @@ func ModifyClassroom(c *gin.Context) {
 	db := utils.GetDB()
 	classroomModel = ClassroomModel{}
 	db.First(&classroomModel, "roomid = ?", inReq.RoomID)
-	db.Model(&classroomModel).Updates(map[string]interface{}{"name":inReq.Name, "description":inReq.Desc, "status":inReq.Status, "teacherid":inReq.TeacherID, "studentnumber":inReq.StudentNum, "end":inReq.End})
+	db.Model(&classroomModel).Updates(map[string]interface{}{"name":inReq.Name, "description":inReq.Desc, "status":inReq.Status, "end":inReq.End})
 	c.JSON(http.StatusOK, gin.H{})
 }
