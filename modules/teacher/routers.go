@@ -15,8 +15,10 @@ import (
 func GetTeacher(c *gin.Context) {
 	mlogger  := logp.NewLogger("teacher")
 	logger := mlogger.Named("get")
+	var teacherList []TeacherRe
 
 	tid := c.Query("tid")
+	queryName := c.Query("name")
 
 	logger.Infof("get the teachers, the teacher id is %s",tid)
 
@@ -38,11 +40,37 @@ func GetTeacher(c *gin.Context) {
 		return
 	}
 
-	var teacherList []TeacherRe
-	studentmodel := GetTeacherModelList()
+	if (queryName != "") {
+		users := []users.UserModel{}
+		var tmp_model TeacherModel
+
+		db := utils.GetDB()
+		db.Where("username LIKE ?", "%"+queryName+"%").Find(&users)
+
+		for _, tmp := range users {
+			tmp_model = TeacherModel{}
+			db.Where("userid=?", tmp.ID).Find(&tmp_model)
+			if(tmp_model.TeacherID != 0 ){
+				teacher := TeacherRe{
+					TeacherID:tmp_model.TeacherID,
+					UserID:tmp_model.UserID,
+					Status:tmp_model.Status,
+					UserName:tmp.Username,
+					Email:tmp.Email,
+					Phone:"",
+					RoomCount:tmp_model.RoomCount}
+
+				teacherList = append(teacherList, teacher)
+			}
+		}
+
+		c.JSON(http.StatusOK, gin.H{"teachers":teacherList})
+		return
+	}
+	teachermodel := GetTeacherModelList()
 
 	db := utils.GetDB()
-	for _, tmp := range studentmodel {
+	for _, tmp := range teachermodel {
 		myuser := users.UserModel{}
 		db.Where("ID=?", tmp.UserID).Find(&myuser)
 		teacher := TeacherRe{
@@ -181,7 +209,9 @@ func ModifyTeacher(c *gin.Context) {
 	db.Model(&newteacher).Updates(map[string]interface{}{"rcount":count})
 
 	//变更班级老师ID
-	db.Model(&classroomModel).Updates(map[string]interface{}{"teacherid":inReq.TeacherID})
+	var userModel users.UserModel
+	db.Where("ID = ?", newteacher.UserID).Find(&userModel)
+	db.Model(&classroomModel).Updates(map[string]interface{}{"teacherid":inReq.TeacherID, "teachername":userModel.Username})
 
 	c.JSON(http.StatusOK, gin.H{})
 }

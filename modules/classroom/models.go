@@ -20,6 +20,7 @@ type ClassroomModel struct {
 	End          string  `gorm:"column:end`      //end date
 	CourseID     uint    `gorm:"column:courseid"`
 	TeacherID    uint    `gorm:"column:teacherid"`
+	TeacherName  string  `gorm:"column:teachername"`
 }
 
 // Migrate the schema of database if needed

@@ -86,15 +86,26 @@ func AddStudent(c *gin.Context) {
 	logger.Infof("the student id is %d, user id is %d, room id is %d ",inReq.StudentID,inReq.UserID,inReq.RoomID)
 
 	db := utils.GetDB()
+
 	var studentModel StudentModel
+	var studentlist []StudentModel
+	classroomModel := classroom.ClassroomModel{}
+	var classroom classroom.ClassroomModel
 
-	db.Where("userid=? AND roomid=?",inReq.UserID, inReq.RoomID).Find(&studentModel)
+	db.First(&classroomModel, "roomid = ?", inReq.RoomID)
 
-	if (studentModel.StudentID != 0){
-		logger.Infof("the student id is %d, user id is %d, has been added into the classroom!",inReq.StudentID,inReq.UserID)
-		c.JSON(http.StatusOK, gin.H{})
-		return
+	db.Where("userid=?",inReq.UserID, inReq.RoomID).Find(&studentlist)
+
+	for _, tmp := range studentlist {
+		db.Where("roomid=?",tmp.RoomID).Find(&classroom)
+
+		if (classroom.CourseID == classroomModel.CourseID){
+			logger.Infof("the student id is %d, user id is %d, has been added into the classroom %d!",inReq.StudentID,inReq.UserID, tmp.RoomID)
+			c.JSON(http.StatusInternalServerError, gin.H{"result": false, "error": "the student has been add other classroom of the course"})
+			return
+		}
 	}
+
 
 	studentModel.StudentID    = inReq.StudentID
 	studentModel.UserID       = inReq.UserID
@@ -105,8 +116,6 @@ func AddStudent(c *gin.Context) {
 		logger.Errorf("save data fail %+v", err)
 	}
 
-	classroomModel := classroom.ClassroomModel{}
-	db.First(&classroomModel, "roomid = ?", inReq.RoomID)
 	number := classroomModel.StudentNum + 1;
 	db.Model(&classroomModel).Updates(map[string]interface{}{"studentnumber":number})
 

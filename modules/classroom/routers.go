@@ -33,6 +33,7 @@ func GetClassroom (c *gin.Context) {
 	classroom.Desc   = classroommodel.Desc
 	classroom.Status = classroommodel.Status
 	classroom.TeacherID = classroommodel.TeacherID
+	classroom.TeacherName = classroommodel.TeacherName
 	classroom.Start     = classroommodel.Start
 	classroom.CourseID  = classroommodel.CourseID
 	c.JSON(http.StatusOK, gin.H{"classroom":classroom})
@@ -71,7 +72,7 @@ func GetClassroomList(c *gin.Context) {
 			End:tmp.End,
 			CourseID:tmp.CourseID,
 			TeacherID:tmp.TeacherID,
-			TeacherName:"tmp,it will get"}
+			TeacherName:tmp.TeacherName}
 
 		classroomList = append(classroomList, classroom)
 	}
@@ -111,6 +112,7 @@ func AddClassroom(c *gin.Context) {
 	classroomModel.End        = ""
 	classroomModel.CourseID   = inReq.CourseID
 	classroomModel.TeacherID  = inReq.TeacherID
+	classroomModel.TeacherName = inReq.TeacherName
 
 	db := utils.GetDB()
 	err = db.Save(&classroomModel).Error
