@@ -13,6 +13,7 @@ import (
 	"smart.com/weixin/smart/modules/classroom"
 	"smart.com/weixin/smart/modules/student"
 	"smart.com/weixin/smart/modules/teacher"
+	"smart.com/weixin/smart/modules/homework"
 )
 type PingResponse struct {
 	BaseResponse
@@ -113,6 +114,9 @@ func (m Manager) webListen() {
 		tuna_v10.POST("/add",teacher.AddTeacher)
 		tuna_v10.POST("/delete",teacher.DeleteTeacher)
 		tuna_v10.POST("/modify",teacher.ModifyTeacher)
+
+		tuna_v11 := tuna_v2.Group("/homework")
+		tuna_v11.GET("/",homework.GetHomework)
 
 		//tuna_v5 := tuna_v2.Group("/articles")
 	}

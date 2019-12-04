@@ -7,5 +7,6 @@ type HomeWorkRe struct {
 	UserID       uint    `json:"uid"`
 	CourseID     uint    `json:"cid"`
 	RoomID       uint    `json:"rid"`
+	Description  string  `json:"hdesc"`
 	Comment      string  `json:"comment"`
 }
