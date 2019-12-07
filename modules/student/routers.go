@@ -94,7 +94,7 @@ func AddStudent(c *gin.Context) {
 
 	db.First(&classroomModel, "roomid = ?", inReq.RoomID)
 
-	db.Where("userid=?",inReq.UserID, inReq.RoomID).Find(&studentlist)
+	db.Where("userid=?",inReq.UserID).Find(&studentlist)
 
 	for _, tmp := range studentlist {
 		db.Where("roomid=?",tmp.RoomID).Find(&classroom)

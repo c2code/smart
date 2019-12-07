@@ -117,6 +117,10 @@ func (m Manager) webListen() {
 
 		tuna_v11 := tuna_v2.Group("/homework")
 		tuna_v11.GET("/",homework.GetHomework)
+		tuna_v11.POST("/add",homework.AddHomework)
+		tuna_v11.POST("/modify",homework.ModifyHomework)
+		tuna_v11.POST("/upload",homework.UploadCourseFile)
+		tuna_v11.GET("/download", homework.ReadCourseFile)
 
 		//tuna_v5 := tuna_v2.Group("/articles")
 	}

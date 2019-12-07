@@ -14,6 +14,7 @@ import (
 	"smart.com/weixin/smart/modules/classroom"
 	"smart.com/weixin/smart/modules/student"
 	"smart.com/weixin/smart/modules/teacher"
+	"smart.com/weixin/smart/modules/homework"
 )
 
 
@@ -123,6 +124,7 @@ func (m Manager) Migrate(db *gorm.DB) {
 	classroom.AutoMigrate()
 	student.AutoMigrate()
 	teacher.AutoMigrate()
+	homework.AutoMigrate()
 
 	/*db.AutoMigrate(&articles.ArticleModel{})
 	db.AutoMigrate(&articles.TagModel{})

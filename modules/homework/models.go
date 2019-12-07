@@ -44,7 +44,7 @@ func GetHomeworkModelListByUid(uid int) []HomeWorkModel{
 func GetHomeworkModelListByUidRid(uid int, rid int) []HomeWorkModel{
 	var homeworklist []HomeWorkModel
 	db := utils.GetDB()
-	db.Where("userid=? AND roomid=?", uid, rid).Find(&homeworklist)
+	db.Where("userid=? AND roomid=?", uid,rid).Find(&homeworklist)
 	return homeworklist
 }
 
