@@ -1,5 +1,7 @@
 package homework
 
+import "sync"
+
 type HomeWorkRe struct {
 	HomeWoekID   uint    `json:"hid"`
 	Status       string  `json:"hstatus"`  // on or off
@@ -10,3 +12,5 @@ type HomeWorkRe struct {
 	Description  string  `json:"hdesc"`
 	Comment      string  `json:"comment"`
 }
+
+var waitgroup sync.WaitGroup;

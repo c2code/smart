@@ -177,6 +177,11 @@ func AddHomework(c *gin.Context) {
 		}
 	}
 
+	waitgroup.Wait()
+
+	waitgroup.Add(1)
+	defer waitgroup.Done()
+
 	db.Last(&lasthowwork)
 
 	homeworkModel.HomeWoekID  = lasthowwork.HomeWoekID + 1;
