@@ -231,7 +231,37 @@ func ModifyHomework(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{})
 }
 
-func UploadCourseFile(c *gin.Context) {
+func UpdateHomework(c *gin.Context) {
+	mlogger  := logp.NewLogger("homework")
+	logger := mlogger.Named("modify")
+
+	body, err := c.GetRawData()
+	if err != nil {
+		logger.Errorf("get raw data fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	var inReq HomeWorkRe
+	err = json.Unmarshal(body, &inReq)
+	if err != nil {
+		logger.Errorf("unmarshal fail %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	logger.Infof("the user id is %d, course id is %d will be update ",inReq.UserID,inReq.CourseID)
+
+	db := utils.GetDB()
+
+	var homeworkModel HomeWorkModel
+	db.Where("userid = ? AND cid=?", inReq.UserID,inReq.CourseID).Find(&homeworkModel)
+	db.Model(&homeworkModel).Updates(map[string]interface{}{"status":inReq.Status})
+
+	c.JSON(http.StatusOK, gin.H{})
+}
+
+func UploadHomeworkFile(c *gin.Context) {
 
 	mlogger  := logp.NewLogger("homework")
 	logger := mlogger.Named("upload")
@@ -325,8 +355,8 @@ func UploadCourseFile(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{})
 }
 
-func ReadCourseFile (c *gin.Context)  {
-	mlogger  := logp.NewLogger("courses")
+func ReadHomeworkFile (c *gin.Context)  {
+	mlogger  := logp.NewLogger("homework")
 	logger := mlogger.Named("readfile")
 	file_path := "/tmp/homework/";
 	//logger.Info("Begin to read files!")
@@ -334,6 +364,139 @@ func ReadCourseFile (c *gin.Context)  {
 	cid := c.Query("cid")
 	uid := c.Query("uid")
 	fileName := cid + ".sb3"
+
+	userid,_ := strconv.Atoi(uid)
+	courseid,_ := strconv.Atoi(cid)
+	var homeworkModel HomeWorkModel
+	db := utils.GetDB()
+	db.Where("userid = ? AND cid=?", userid,courseid).Find(&homeworkModel)
+
+	file_path = file_path + strconv.Itoa((int)(homeworkModel.CourseID)) + "/" + strconv.Itoa((int)(homeworkModel.RoomID)) + "/" + uid + "/" + fileName;
+
+	c.Header("Content-Disposition", "attachment; filename="+url.QueryEscape(path.Base(file_path)))
+
+	file, err := os.OpenFile(file_path, os.O_RDONLY, 0666)
+	defer file.Close()
+
+	if err != nil {
+		logger.Errorf("open file fail on disk: %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	c.Header("Content-Type", "application/octet-stream")
+
+	c.Stream(func(w io.Writer) bool {
+		io.Copy(w, file)
+		return false
+	})
+
+	return
+}
+
+func UploadHomeworkFileImage(c *gin.Context) {
+
+	mlogger  := logp.NewLogger("homework")
+	logger := mlogger.Named("upload")
+	file_path := "/tmp/homework/";
+	//logger.Info("Begin to upload files!")
+
+	err := c.Request.ParseMultipartForm(32 << 10)  //32M
+
+	if err != nil {
+		logger.Errorf("pares formdata error : %+v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	form := c.Request.MultipartForm
+
+	cid := form.Value["cid"][0]
+	uid := form.Value["uid"][0]
+	files := form.File["upload"]
+	fileName := cid + ".png"
+
+	userid,_ := strconv.Atoi(uid)
+	courseid,_ := strconv.Atoi(cid)
+
+	var homeworkModel HomeWorkModel
+	db := utils.GetDB()
+	db.Where("userid = ? AND cid=?", userid,courseid).Find(&homeworkModel)
+
+	file_path = file_path + strconv.Itoa((int)(homeworkModel.CourseID)) + "/" + strconv.Itoa((int)(homeworkModel.RoomID)) + "/" + uid + "/";
+
+	err=os.MkdirAll(file_path ,0755)
+	if err!=nil{
+		logger.Errorf("create file path %s if fail : %+v", cid, err)
+		c.JSON(http.StatusInternalServerError, gin.H{})
+		return
+	}
+
+	for i, _ := range files {
+		//fileName = files[i].Filename
+		logger.Infof("%s of cid=%s will create", fileName, cid)
+		file, err := files[i].Open()
+
+		defer file.Close()
+
+		if err != nil {
+			logger.Errorf("Open source file : %+v", err)
+			c.JSON(http.StatusInternalServerError, gin.H{})
+			return
+		}
+
+		// Open file for writing
+		newfile, err := os.OpenFile(file_path + fileName,
+			os.O_WRONLY|os.O_TRUNC|os.O_CREATE,
+			0755,
+		)
+
+		if err != nil {
+			logger.Errorf("Create destination file fail on disk: %+v", err)
+			c.JSON(http.StatusInternalServerError, gin.H{"courses": ""})
+			return
+		}
+
+		defer newfile.Close();
+
+		// Create a buffered writer from the file
+		bufferedWriter := bufio.NewWriter(newfile)
+
+		buf := make([]byte, 35*1024)
+
+		for i := 0; i < 2*1024*1024*1024/35; i++ {//break in 2*1024*1024/(35*35)
+			r, e := file.Read(buf)
+			if r == 0 {
+				if e != nil || e == io.EOF {
+					break
+				}
+			}
+
+			_, err = bufferedWriter.Write(buf)
+
+			if err != nil {
+				logger.Errorf("Write destination file fail on disk: %+v", err)
+				c.JSON(http.StatusInternalServerError, gin.H{})
+				return
+			}
+
+		}
+
+		bufferedWriter.Flush()
+	}
+
+	c.JSON(http.StatusOK, gin.H{})
+}
+
+func ReadHomeworkFileImage (c *gin.Context)  {
+	mlogger  := logp.NewLogger("homework")
+	logger := mlogger.Named("readfile")
+	file_path := "/tmp/homework/";
+	//logger.Info("Begin to read files!")
+
+	cid := c.Query("cid")
+	uid := c.Query("uid")
+	fileName := cid + ".png"
 
 	userid,_ := strconv.Atoi(uid)
 	courseid,_ := strconv.Atoi(cid)
