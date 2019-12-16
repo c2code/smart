@@ -15,6 +15,7 @@ import (
 	"smart.com/weixin/smart/utils"
 	"smart.com/weixin/smart/modules/student"
 	"smart.com/weixin/smart/modules/courses"
+	"strings"
 )
 
 func GetHomework(c *gin.Context) {
@@ -361,8 +362,14 @@ func ReadHomeworkFile (c *gin.Context)  {
 	file_path := "/tmp/homework/";
 	//logger.Info("Begin to read files!")
 
-	cid := c.Query("cid")
-	uid := c.Query("uid")
+	tmp := strings.Split(c.Request.RequestURI, "?")[1]
+	uid_tmp := strings.Split(tmp, "&")[0]
+	cid_tmp := strings.Split(tmp, "&")[1]
+
+
+	cid := strings.Split(cid_tmp, "=")[1]
+	cid = strings.Split(cid, "/")[0]
+	uid := strings.Split(uid_tmp, "=")[1]
 	fileName := cid + ".sb3"
 
 	userid,_ := strconv.Atoi(uid)

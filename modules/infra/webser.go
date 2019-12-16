@@ -72,6 +72,11 @@ func (m Manager) webListen() {
 		tuna_v3.POST("/", users.UsersRegistration)// UsersRegistration)
 		tuna_v3.POST("/login",users.UsersLogin)// UsersLogin)
 
+		//不做头部鉴权Authentication
+		tuna_v12 := tuna_v2.Group("/myhomework")
+		tuna_v12.GET("/download", homework.ReadHomeworkFile)
+
+		//做头部鉴权Authentication
 		tuna_v2.Use(users.AuthMiddleware(true))
 
 		tuna_v4 := tuna_v2.Group("/profiles")
@@ -121,9 +126,10 @@ func (m Manager) webListen() {
 		tuna_v11.POST("/modify",homework.ModifyHomework)
 		tuna_v11.POST("/update",homework.UpdateHomework)
 		tuna_v11.POST("/upload",homework.UploadHomeworkFile)
-		tuna_v11.GET("/download", homework.ReadHomeworkFile)
+		//tuna_v11.GET("/download", homework.ReadHomeworkFile)
 		tuna_v11.POST("/image",homework.UploadHomeworkFileImage)
 		tuna_v11.GET("/image", homework.ReadHomeworkFileImage)
+
 
 		//tuna_v5 := tuna_v2.Group("/articles")
 	}
