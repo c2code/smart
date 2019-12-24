@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"github.com/gin-gonic/gin"
 	"fmt"
+	"smart.com/weixin/smart/logp"
 )
 
 func UsersRegister(router *gin.RouterGroup) {
@@ -115,8 +116,11 @@ func UserRetrieve(c *gin.Context) {
 }
 
 func UserUpdate(c *gin.Context) {
+	mlogger  := logp.NewLogger("user")
+	logger := mlogger.Named("update")
 	myUserModel := c.MustGet("my_user_model").(UserModel)
 	userModelValidator := NewUserModelValidatorFillWith(myUserModel)
+	logger.Infof("user update data %+v",c.MustGet("my_user_model"))
 	if err := userModelValidator.Bind(c); err != nil {
 		c.JSON(http.StatusUnprocessableEntity, utils.NewValidatorError(err))
 		return
@@ -138,15 +142,15 @@ func UserList (c *gin.Context) {
 
 	db := utils.GetDB()
 	users := []UserModel{}
-	userlist := []UserRe{}
+	userlist := []UserResponse{}
 	db.Where("username LIKE ?", "%"+name+"%").Find(&users)
 
 	for _, tmp := range users {
-		myuser := UserRe{
+		myuser := UserResponse{
 			ID:tmp.ID,
 			Username:tmp.Username,
 			Email:tmp.Email,
-			Phone:""}
+			Phone:tmp.Phone}
 
 		userlist = append(userlist, myuser)
 	}

@@ -16,18 +16,20 @@ type UserModelValidator struct {
 		Password string `form:"password" json:"password" binding:"exists,min=8,max=255"`
 		Bio      string `form:"bio" json:"bio" binding:"max=1024"`
 		Image    string `form:"image" json:"image" binding:"omitempty,url"`
+		Phone    string `form:"phone" json:"phone" binding:"max=255"`
+		Nickname string `form:"nickname" json:"nickname" binding:"max=255"`
 	} `json:"user"`
 	userModel UserModel `json:"-"`
 }
 
-type UserRe struct {
+/*type UserRe struct {
 	ID       uint   `json:"uid"`
 	Username string `json:"username"`
 	Email    string `json:"email"`
 	Bio      string `json:"bio"`
 	Image    string `json:"image"`
 	Phone    string `json:"phone"`
-}
+}*/
 
 // There are some difference when you create or update a model, you need to fill the DataModel before
 // update so that you can use your origin data to cheat the validator.
@@ -40,6 +42,8 @@ func (self *UserModelValidator) Bind(c *gin.Context) error {
 	self.userModel.Username = self.User.Username
 	self.userModel.Email = self.User.Email
 	self.userModel.Bio = self.User.Bio
+	self.userModel.Nickname = self.User.Nickname
+	self.userModel.Phone = self.User.Phone
 
 	if self.User.Password != utils.NBRandomPassword {
 		self.userModel.setPassword(self.User.Password)
@@ -63,6 +67,9 @@ func NewUserModelValidatorFillWith(userModel UserModel) UserModelValidator {
 	userModelValidator.User.Email = userModel.Email
 	userModelValidator.User.Bio = userModel.Bio
 	userModelValidator.User.Password = utils.NBRandomPassword
+
+	userModelValidator.User.Phone = userModel.Phone
+	userModelValidator.User.Nickname = userModel.Nickname
 
 	if userModel.Image != nil {
 		userModelValidator.User.Image = *userModel.Image

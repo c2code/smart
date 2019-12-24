@@ -19,6 +19,11 @@ type UserModel struct {
 	Bio          string  `gorm:"column:bio;size:1024"`
 	Image        *string `gorm:"column:image"`
 	PasswordHash string  `gorm:"column:password;not null"`
+	Role         string  `gorm:"column:role"` //student teacher admin super
+	Rights       int     `gorm:"column:rights"`
+	Schedule     int     `gorm:"column:schedule"`
+	Phone        string  `gorm:"column:phone"`
+	Nickname     string  `gorm:"column:nickname"`
 }
 
 // A hack way to save ManyToMany relationship,
