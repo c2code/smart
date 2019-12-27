@@ -5,6 +5,7 @@ import (
 	"github.com/jinzhu/gorm"
 	"smart.com/weixin/smart/utils"
 	"golang.org/x/crypto/bcrypt"
+	"smart.com/weixin/smart/logp"
 )
 
 // Models should only be concerned with database schema, more strict checking should be put in validator.
@@ -50,6 +51,38 @@ func AutoMigrate() {
 
 	db.AutoMigrate(&UserModel{})
 	db.AutoMigrate(&FollowModel{})
+}
+
+func InitUser() {
+	mlogger  := logp.NewLogger("user")
+	logger := mlogger.Named("init")
+	var admin UserModel;
+	db := utils.GetDB()
+	db.Where("ID=?",1).Find(&admin)
+
+	if (admin.ID == 1) {
+		return
+	}
+
+	admin = UserModel {
+		ID           : 1,
+		Username     : "admin",
+		Email        : "admin@admin.com",
+		Bio          : "",
+		Image        : nil,
+		PasswordHash : "11111111",
+		Role         : "super",
+		Rights       : 0,
+		Schedule     : 0,
+		Phone        : "13810631145",
+		Nickname     : "超级管理员"}
+
+	admin.setPassword(admin.PasswordHash)
+
+	err := db.Save(&admin).Error
+	if err != nil {
+		logger.Infof("save data fail %+v", err)
+	}
 }
 
 // What's bcrypt? https://en.wikipedia.org/wiki/Bcrypt

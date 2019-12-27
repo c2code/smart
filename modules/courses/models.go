@@ -57,8 +57,10 @@ func SaveOne(data interface{}) error {
 	return err
 }
 
-func InitCouses() {
+func InitData() {
 	var courseslist []CoursesModelValidator
+
+	db := utils.GetDB()
 
 	config_file, err := os.Open("./courses.json")
 	defer config_file.Close()
@@ -90,7 +92,6 @@ func InitCouses() {
 
 	var courseModel CourseModel
 
-	db := utils.GetDB()
 	courseModel = CourseModel{}
 	db.First(&courseModel, "courseid = ?", "1")
 
@@ -114,7 +115,7 @@ func InitCouses() {
 		}
 	}
 
-	
+
 
 	return
 

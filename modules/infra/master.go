@@ -86,7 +86,9 @@ func Run() {
 	tx1.Commit()
 	fmt.Println(userA)*/
 
-	courses.InitCouses()
+	courses.InitData()
+
+	users.InitUser()
 
 	//to liston to port 8088 by default
 	manager.webListen()

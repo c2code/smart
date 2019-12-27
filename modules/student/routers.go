@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"smart.com/weixin/smart/modules/users"
 	"smart.com/weixin/smart/modules/classroom"
+	"smart.com/weixin/smart/modules/courses"
 )
 
 
@@ -116,6 +117,19 @@ func AddStudent(c *gin.Context) {
 		logger.Errorf("save data fail %+v", err)
 	}
 
+	var courseModel courses.CourseModel
+	var userModel users.UserModel
+	db.Where("courseid=?",classroomModel.CourseID).Find(&courseModel)
+
+	level := courseModel.CourseLevel //获取位图信息，通过level的定位位图信息
+	tmp := level[1:len(level)]
+	i, _ := strconv.Atoi(tmp)
+	count := 1 << uint(i - 1)
+
+	db.Where("ID=?",inReq.UserID).Find(&userModel)
+	userModel.Rights = userModel.Rights | count
+	db.Model(&userModel).Updates(map[string]interface{}{"rights":userModel.Rights})
+
 	number := classroomModel.StudentNum + 1;
 	db.Model(&classroomModel).Updates(map[string]interface{}{"studentnumber":number})
 
@@ -150,6 +164,19 @@ func DeleteStudent(c *gin.Context) {
 	db.First(&classroomModel, "roomid = ?", inReq.RoomID)
 	number := classroomModel.StudentNum - 1;
 	db.Model(&classroomModel).Updates(map[string]interface{}{"studentnumber":number})
+
+	var courseModel courses.CourseModel
+	var userModel users.UserModel
+	db.Where("courseid=?",classroomModel.CourseID).Find(&courseModel)
+
+	level := courseModel.CourseLevel //获取位图信息，通过level的定位位图信息
+	tmp := level[1:len(level)]
+	i, _ := strconv.Atoi(tmp)
+	count := 1 << uint(i - 1)
+
+	db.Where("ID=?",inReq.UserID).Find(&userModel)
+	userModel.Rights = userModel.Rights & (^count)
+	db.Model(&userModel).Updates(map[string]interface{}{"rights":userModel.Rights})
 
 	c.JSON(http.StatusOK, gin.H{})
 }

@@ -11,6 +11,8 @@ import (
 	"net/url"
 	"path"
 	"encoding/json"
+	"strings"
+	"strconv"
 )
 
 func GetCourseList(c *gin.Context) {
@@ -144,14 +146,88 @@ func ReadCourseFile (c *gin.Context)  {
 		return
 	}
 
-	c.Header("Content-Type", "video/mp4")
+	fi, err := file.Stat()
 
-	c.Stream(func(w io.Writer) bool {
-		io.Copy(w, file)
-		return false
-	})
+	if err != nil {
+		logger.Errorf("open file fail on disk: %+v", err)
+		c.Data(http.StatusOK, "application/octet-stream", nil)
+		return
+	}
 
-	return
+	fileSize := int(fi.Size())
+	logger.Infof("mp4 file size is %d", fileSize)
+
+	if len(c.GetHeader("Range")) == 0 {
+		logger.Info("mp4 file will play on begin")
+		contentLength := strconv.Itoa(fileSize)
+		contentEnd := strconv.Itoa(fileSize - 1)
+		c.Header("Content-Type", "video/mp4")
+		c.Header("Accept-Ranges", "bytes")
+		c.Header("Content-Length", contentLength)
+		c.Header("Content-Range", "bytes 0-"+contentEnd+"/"+contentLength)
+		c.Writer.WriteHeader(206)
+
+		c.Stream(func(w io.Writer) bool {
+			io.Copy(w, file)
+			return false
+		})
+
+		return
+
+	} else {
+		rangeParam := strings.Split(c.GetHeader("Range"), "=")[1]
+		splitParams := strings.Split(rangeParam, "-")
+
+		logger.Info("mp4 file will play on middle")
+
+		contentStartValue := 0
+		contentStart := strconv.Itoa(contentStartValue)
+		contentEndValue := fileSize - 1
+		contentEnd := strconv.Itoa(contentEndValue)
+		contentSize := strconv.Itoa(fileSize)
+
+		if len(splitParams) > 0 {
+			contentStartValue, err = strconv.Atoi(splitParams[0])
+			if err != nil {
+				contentStartValue = 0
+			}
+			contentStart = strconv.Itoa(contentStartValue)
+		}
+
+		if len(splitParams) > 1 {
+			contentEndValue, err = strconv.Atoi(splitParams[1])
+
+			if err != nil {
+				contentEndValue = fileSize - 1
+			}
+
+			contentEnd = strconv.Itoa(contentEndValue)
+		}
+
+		contentLength := strconv.Itoa(contentEndValue - contentStartValue + 1)
+
+		c.Header("Content-Type", "video/mp4")
+		c.Header("Accept-Ranges", "bytes")
+		c.Header("Content-Length", contentLength)
+		c.Header("Content-Range", "bytes "+contentStart+"-"+contentEnd+"/"+contentSize)
+		c.Writer.WriteHeader(206)
+
+		file.Seek(int64(contentStartValue), 0)
+
+		c.Stream(func(w io.Writer) bool {
+			io.Copy(w, file)
+			return false
+		})
+	}
+
+	//c.Header("Content-Type", "video/mp4")
+
+	//c.Stream(func(w io.Writer) bool {
+	//	io.Copy(w, file)
+	//	return false
+	//})
+
+	//return
 }
 
 func ModifyCourse (c *gin.Context)  {

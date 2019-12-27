@@ -16,6 +16,7 @@ import (
 	"smart.com/weixin/smart/modules/student"
 	"smart.com/weixin/smart/modules/courses"
 	"strings"
+	"smart.com/weixin/smart/modules/users"
 )
 
 func GetHomework(c *gin.Context) {
@@ -202,7 +203,7 @@ func AddHomework(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{})
 }
 
-func ModifyHomework(c *gin.Context) {
+func CommentHomework(c *gin.Context) {
 	mlogger  := logp.NewLogger("homework")
 	logger := mlogger.Named("modify")
 
@@ -228,6 +229,19 @@ func ModifyHomework(c *gin.Context) {
 	var homeworkModel HomeWorkModel
 	db.Where("userid = ? AND cid=?", inReq.UserID,inReq.CourseID).Find(&homeworkModel)
 	db.Model(&homeworkModel).Updates(map[string]interface{}{"status":inReq.Status, "comment":inReq.Comment})
+
+	var courseModel courses.CourseModel
+	var userModel users.UserModel
+	db.Where("courseid=?",inReq.CourseID).Find(&courseModel)
+
+	if(strings.Contains(courseModel.Name, "课外挑战")){
+		c.JSON(http.StatusOK, gin.H{})
+		return
+	}
+
+	db.Where("ID=?",inReq.UserID).Find(&userModel)
+	userModel.Schedule = int(inReq.CourseID)
+	db.Model(&userModel).Updates(map[string]interface{}{"schedule":userModel.Schedule})
 
 	c.JSON(http.StatusOK, gin.H{})
 }
