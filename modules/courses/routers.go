@@ -21,7 +21,7 @@ func GetCourseList(c *gin.Context) {
 	coursemodel := GetCourseModel()
 
 	for _, tmp := range coursemodel {
-		course := CoursesModelValidator {CourseID:tmp.CourseID, PID:tmp.PID, Name:tmp.Name, Desc:tmp.Desc, Vedio:tmp.Vedio, CourseLevel:tmp.CourseLevel}
+		course := CoursesModelValidator {CourseID:tmp.CourseID, PID:tmp.PID, Name:tmp.Name, Desc:tmp.Desc, Vedio:tmp.Vedio, CourseLevel:tmp.CourseLevel, Depth:tmp.Depth}
 
 		courselist = append(courselist, course)
 	}
@@ -281,6 +281,7 @@ func AddCourse (c *gin.Context)  {
 	logger.Infof("the cid is %d, the PID is %d, the name is %s , the desc is %s, the course level is %s",inReq.CourseID, inReq.PID, inReq.Name, inReq.Desc, inReq.CourseLevel)
 
 	var courseModel CourseModel
+	var tmp_couse CourseModel
 	courseModel.CourseID = inReq.CourseID
 	courseModel.PID      = inReq.PID
 	courseModel.Name     = inReq.Name
@@ -288,6 +289,20 @@ func AddCourse (c *gin.Context)  {
 	courseModel.Vedio    = inReq.Vedio
 	courseModel.CourseLevel = inReq.CourseLevel
 	db := utils.GetDB()
+
+	i := 1;
+	tmp_pid := inReq.PID
+	for (tmp_pid != 0 ) {
+		db.Where("courseid=?",tmp_pid).Find(&tmp_couse)
+		tmp_pid = tmp_couse.PID
+		i = i + 1
+	}
+
+	//db.Last(&tmp_couse) 前端生成id
+	//courseModel.CourseID = tmp_couse.CourseID + 1
+
+	courseModel.Depth = i;
+
 	err = db.Save(&courseModel).Error
 	if err != nil {
 		logger.Errorf("save data fail %+v", err)

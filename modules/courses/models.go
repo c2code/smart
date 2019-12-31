@@ -1,7 +1,6 @@
 package courses
 
 import ( "github.com/jinzhu/gorm"
-    "smart.com/weixin/smart/modules/users"
 	"smart.com/weixin/smart/utils"
 	"fmt"
 	"os"
@@ -21,25 +20,7 @@ type CourseModel struct {
 	Desc         string  `gorm:"column:description;size:1024"`
 	Vedio        string  `gorm:"column:vedio"`
 	CourseLevel  string  `gorm:"column:clevel"`
-}
-
-type HomeworkModel struct {
-	gorm.Model
-	Slug        uint                    `gorm:"column:slug;unique_index"`
-	Title       string
-	Author      CourseUserModel
-	AuthorID    uint
-	CourseID    uint                    `gorm:"column:courseid"`
-	Status      string                  `gorm:"column:status"`   //modify, commit, comment
-	Address     string                  `gorm:"column:address"`  //作品路径
-}
-
-type CourseUserModel struct {
-	gorm.Model
-	UserModel          users.UserModel
-	UserModelID        uint
-	CourseModels       []CourseModel   `gorm:"many2many:courseid"`   //已开通的课程
-	HomeWorksModels    []HomeworkModel `gorm:"ForeignKey:AuthorID"` //提交的作业
+	Depth        int     `gorm:"column:depth"`
 }
 
 // Migrate the schema of database if needed
@@ -109,6 +90,7 @@ func InitData() {
 		courseModel.Desc     = course.Desc
 		courseModel.Vedio    = course.Vedio
 		courseModel.CourseLevel = course.CourseLevel
+		courseModel.Depth    = course.Depth
 		if err := SaveOne(&courseModel); err != nil {
 			fmt.Printf("database err:%+v \n", err)
 			continue

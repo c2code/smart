@@ -18,8 +18,32 @@ func GetStudent(c *gin.Context) {
 	logger := mlogger.Named("get")
 
 	roomid := c.Query("rid")
+	uid := c.Query("uid")
+	clevel := c.Query("clevel")
 
-	logger.Infof("get the students, the classroom id is %s",roomid)
+	logger.Infof("get the students, the classroom id is %s, uid is %d, clevel is %s.",roomid, uid, clevel)
+
+	if (uid != "" && clevel != "") {
+		tmp := StudentModel{}
+		db := utils.GetDB()
+		userid,_ := strconv.Atoi(uid)
+
+		db.Where("userid=? AND level=?", userid, clevel).Find(&tmp)
+		myuser := users.UserModel{}
+		db.Where("ID=?", tmp.UserID).Find(&myuser)
+		student := StudentRe{
+			StudentID:tmp.StudentID,
+			UserID:tmp.UserID,
+			RoomID:tmp.RoomID,
+			UserName:myuser.Username,
+			Email:myuser.Email,
+			phone:"",
+			RoomName:"",
+			Level:tmp.Level,
+			Ccid:tmp.Ccid}
+		c.JSON(http.StatusOK, gin.H{"student":student})
+		return
+	}
 
 	if (roomid == "") {
 		tmp := StudentModel{}
@@ -34,7 +58,9 @@ func GetStudent(c *gin.Context) {
 			UserName:myuser.Username,
 			Email:myuser.Email,
 			phone:"",
-			RoomName:""}
+			RoomName:"",
+			Level:tmp.Level,
+			Ccid:tmp.Ccid}
 		c.JSON(http.StatusOK, gin.H{"student":student})
 		return
 	}
@@ -57,7 +83,9 @@ func GetStudent(c *gin.Context) {
 			UserName:myuser.Username,
 			Email:myuser.Email,
 			phone:"",
-			RoomName:myclassroom.Name}
+			RoomName:myclassroom.Name,
+			Level:tmp.Level,
+			Ccid:tmp.Ccid}
 
 		studentList = append(studentList, student)
 	}
@@ -107,19 +135,25 @@ func AddStudent(c *gin.Context) {
 		}
 	}
 
+	var courseModel courses.CourseModel
+	var courseList  []courses.CourseModel
+	var userModel users.UserModel
+	db.Where("courseid=?",classroomModel.CourseID).Find(&courseModel)
+	db.Where("clevel=? AND depth=?",courseModel.CourseLevel, 3).Find(&courseList)
 
-	studentModel.StudentID    = inReq.StudentID
+	laststudent := StudentModel{}
+	db.Last(&laststudent)
+
+	studentModel.StudentID    = laststudent.StudentID + 1
 	studentModel.UserID       = inReq.UserID
 	studentModel.RoomID       = inReq.RoomID
+	studentModel.Level        = courseModel.CourseLevel
+	studentModel.Ccid         = courseList[0].CourseID
 
 	err = db.Save(&studentModel).Error
 	if err != nil {
 		logger.Errorf("save data fail %+v", err)
 	}
-
-	var courseModel courses.CourseModel
-	var userModel users.UserModel
-	db.Where("courseid=?",classroomModel.CourseID).Find(&courseModel)
 
 	level := courseModel.CourseLevel //获取位图信息，通过level的定位位图信息
 	tmp := level[1:len(level)]

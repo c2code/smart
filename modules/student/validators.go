@@ -8,4 +8,6 @@ type StudentRe struct {
 	Email        string  `json:"email"`
 	phone        string  `json:"phone"`
 	RoomName     string  `json:"rname"`
+	Level        string  `json:"level"`
+	Ccid         uint    `json:"ccid"`
 }

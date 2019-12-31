@@ -14,6 +14,8 @@ type StudentModel struct {
 	StudentID    uint    `gorm:"column:studentid;unique_index"`
 	UserID       uint    `gorm:"column:userid"`
 	RoomID       uint    `gorm:"column:roomid"`
+	Level        string  `gorm:"column:level"`
+	Ccid         uint    `gorm:"column:ccid"`
 }
 
 // Migrate the schema of database if needed

@@ -16,7 +16,6 @@ import (
 	"smart.com/weixin/smart/modules/student"
 	"smart.com/weixin/smart/modules/courses"
 	"strings"
-	"smart.com/weixin/smart/modules/users"
 )
 
 func GetHomework(c *gin.Context) {
@@ -231,7 +230,7 @@ func CommentHomework(c *gin.Context) {
 	db.Model(&homeworkModel).Updates(map[string]interface{}{"status":inReq.Status, "comment":inReq.Comment})
 
 	var courseModel courses.CourseModel
-	var userModel users.UserModel
+	var studentModel student.StudentModel
 	db.Where("courseid=?",inReq.CourseID).Find(&courseModel)
 
 	if(strings.Contains(courseModel.Name, "课外挑战")){
@@ -239,9 +238,20 @@ func CommentHomework(c *gin.Context) {
 		return
 	}
 
-	db.Where("ID=?",inReq.UserID).Find(&userModel)
-	userModel.Schedule = int(inReq.CourseID)
-	db.Model(&userModel).Updates(map[string]interface{}{"schedule":userModel.Schedule})
+	db.Where("userid=? AND level=?",inReq.UserID, courseModel.CourseLevel).Find(&studentModel)
+	var courseList  []courses.CourseModel
+	var tmp_course courses.CourseModel
+	db.Where("clevel=? AND depth=?",courseModel.CourseLevel, 3).Find(&courseList)
+	for _, tmp_course = range courseList {
+		if (tmp_course.CourseID > courseModel.CourseID){
+			studentModel.Ccid = tmp_course.CourseID
+			break
+		}
+	}
+
+	if (tmp_course.CourseID != courseModel.CourseID) {
+		db.Model(&studentModel).Updates(map[string]interface{}{"schedule":studentModel.Ccid})
+	}
 
 	c.JSON(http.StatusOK, gin.H{})
 }

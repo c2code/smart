@@ -103,7 +103,8 @@ func AddClassroom(c *gin.Context) {
 
 
 	var classroomModel ClassroomModel
-	classroomModel.RoomID     = inReq.RoomID
+	var tmp ClassroomModel
+	//classroomModel.RoomID     = inReq.RoomID
 	classroomModel.Name       = inReq.Name
 	classroomModel.Desc       = inReq.Desc
 	classroomModel.StudentNum = 0
@@ -115,6 +116,9 @@ func AddClassroom(c *gin.Context) {
 	classroomModel.TeacherName = inReq.TeacherName
 
 	db := utils.GetDB()
+	db.Last(&tmp)
+	classroomModel.RoomID = tmp.RoomID + 1
+
 	err = db.Save(&classroomModel).Error
 	if err != nil {
 		logger.Errorf("save data fail %+v", err)

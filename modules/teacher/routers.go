@@ -111,6 +111,7 @@ func AddTeacher(c *gin.Context) {
 
 
 	var teacherModel TeacherModel
+	var lastTeacher TeacherModel
 
 	db := utils.GetDB()
 	db.Where("userid=?",inReq.UserID).Find(&teacherModel)
@@ -121,7 +122,9 @@ func AddTeacher(c *gin.Context) {
 		return
 	}
 
-	teacherModel.TeacherID    = inReq.TeacherID
+	db.Last(&lastTeacher)
+
+	teacherModel.TeacherID    = lastTeacher.TeacherID + 1
 	teacherModel.UserID       = inReq.UserID
 	teacherModel.Status       = inReq.Status
 	teacherModel.RoomCount    = 0
