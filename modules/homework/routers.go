@@ -249,8 +249,9 @@ func CommentHomework(c *gin.Context) {
 		}
 	}
 
+	logger.Infof("the user id is %d, the current course id is %d !!",inReq.UserID,studentModel.Ccid)
 	if (tmp_course.CourseID != courseModel.CourseID) {
-		db.Model(&studentModel).Updates(map[string]interface{}{"schedule":studentModel.Ccid})
+		db.Model(&studentModel).Updates(map[string]interface{}{"ccid":studentModel.Ccid})
 	}
 
 	c.JSON(http.StatusOK, gin.H{})
