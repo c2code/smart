@@ -242,14 +242,18 @@ func CommentHomework(c *gin.Context) {
 	var courseList  []courses.CourseModel
 	var tmp_course courses.CourseModel
 	db.Where("clevel=? AND depth=?",courseModel.CourseLevel, 3).Find(&courseList)
-	for _, tmp_course = range courseList {
+	var index int;
+	for index, tmp_course = range courseList {
 		if (tmp_course.CourseID > courseModel.CourseID){
 			studentModel.Ccid = tmp_course.CourseID
 			break
 		}
 	}
 
-	logger.Infof("the user id is %d, the current course id is %d !!",inReq.UserID,studentModel.Ccid)
+	if (index + 1 == len(courseList)){
+		studentModel.Ccid = 999999999
+	}
+
 	if (tmp_course.CourseID != courseModel.CourseID) {
 		db.Model(&studentModel).Updates(map[string]interface{}{"ccid":studentModel.Ccid})
 	}
