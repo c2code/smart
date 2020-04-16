@@ -90,9 +90,10 @@ func GetHomework(c *gin.Context) {
 	homeworkModelList := GetHomeworkModelListByUid(userid)
 
 	for _, homeworkModel := range homeworkModelList {
-		if(homeworkModel.CourseID == 0) {
-			continue
-		}
+		//过滤掉自由创作作品
+		//if(homeworkModel.CourseID == 0) {
+		//	continue
+		//}
 		homework.HomeWoekID  = homeworkModel.HomeWoekID
 		homework.Status      = homeworkModel.Status
 		homework.Addr        = homeworkModel.Addr
