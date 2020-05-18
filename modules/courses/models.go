@@ -5,6 +5,7 @@ import ( "github.com/jinzhu/gorm"
 	"fmt"
 	"os"
 	"encoding/json"
+	//"github.com/biezhi/gorm-paginator/pagination"
 )
 
 // Models should only be concerned with database schema, more strict checking should be put in validator.
@@ -42,6 +43,19 @@ func InitData() {
 	var courseslist []CoursesModelValidator
 
 	db := utils.GetDB()
+
+	/*分页处理，每页两条，取第二页内容
+	var course []CourseModel
+
+	pagination.Paging(&pagination.Param{
+		DB:      db.Where("id > ?", 0),
+		Page:    2,
+		Limit:   2,
+		OrderBy: []string{"id desc"},
+		ShowSQL: true,
+	}, &course)
+
+	fmt.Println("users:", course)*/
 
 	config_file, err := os.Open("./courses.json")
 	defer config_file.Close()

@@ -10,6 +10,7 @@ import (
 	"smart.com/weixin/smart/modules/users"
 	"smart.com/weixin/smart/modules/classroom"
 	"smart.com/weixin/smart/modules/courses"
+	"github.com/biezhi/gorm-paginator/pagination"
 )
 
 
@@ -20,77 +21,141 @@ func GetStudent(c *gin.Context) {
 	roomid := c.Query("rid")
 	uid := c.Query("uid")
 	clevel := c.Query("clevel")
+	page := c.Query("page")
 
-	logger.Infof("get the students, the classroom id is %s, uid is %d, clevel is %s.",roomid, uid, clevel)
+	logger.Infof("get the students, the classroom id is %s, uid is %d, clevel is %s,page is %s.",roomid, uid, clevel, page)
 
-	if (uid != "" && clevel != "") {
-		tmp := StudentModel{}
+	if (page != "") {
+		/*分页处理，每页两条，取第二页内容*/
+		mypage, _ := strconv.Atoi(page)
+		var studentList []StudentRe
+		var studentmodel []StudentModel
 		db := utils.GetDB()
-		userid,_ := strconv.Atoi(uid)
 
-		db.Where("userid=? AND level=?", userid, clevel).Find(&tmp)
-		myuser := users.UserModel{}
-		db.Where("ID=?", tmp.UserID).Find(&myuser)
-		student := StudentRe{
-			StudentID:tmp.StudentID,
-			UserID:tmp.UserID,
-			RoomID:tmp.RoomID,
-			UserName:myuser.Username,
-			Email:myuser.Email,
-			phone:"",
-			RoomName:"",
-			Level:tmp.Level,
-			Ccid:tmp.Ccid}
-		c.JSON(http.StatusOK, gin.H{"student":student})
-		return
-	}
+		pagination.Paging(&pagination.Param{
+			DB:      db.Where("id > ?", 0),
+			Page:    mypage,
+			Limit:   20,
+			OrderBy: []string{"id"}, //降序是id desc
+			ShowSQL: true,
+		}, &studentmodel)
 
-	if (roomid == "") {
-		tmp := StudentModel{}
+		for _, tmp := range studentmodel {
+			myclassroom := classroom.ClassroomModel{}
+			db.Where("roomid=?", tmp.RoomID).Find(&myclassroom)
+			myuser := users.UserModel{}
+			db.Where("ID=?", tmp.UserID).Find(&myuser)
+			student := StudentRe{
+				StudentID: tmp.StudentID,
+				UserID:    tmp.UserID,
+				RoomID:    tmp.RoomID,
+				UserName:  myuser.Username,
+				Email:     myuser.Email,
+				phone:     "",
+				RoomName:  myclassroom.Name,
+				Level:     tmp.Level,
+				Ccid:      tmp.Ccid}
+
+			studentList = append(studentList, student)
+		}
+
+		c.JSON(http.StatusOK, gin.H{"students": studentList})
+
+	}else {
+
+		if (uid != "" && clevel != "") {
+			tmp := StudentModel{}
+			db := utils.GetDB()
+			userid, _ := strconv.Atoi(uid)
+
+			db.Where("userid=? AND level=?", userid, clevel).Find(&tmp)
+			myuser := users.UserModel{}
+			db.Where("ID=?", tmp.UserID).Find(&myuser)
+			student := StudentRe{
+				StudentID: tmp.StudentID,
+				UserID:    tmp.UserID,
+				RoomID:    tmp.RoomID,
+				UserName:  myuser.Username,
+				Email:     myuser.Email,
+				phone:     "",
+				RoomName:  "",
+				Level:     tmp.Level,
+				Ccid:      tmp.Ccid}
+			c.JSON(http.StatusOK, gin.H{"student": student})
+			return
+		}
+
+		if (roomid == "") {
+			tmp := StudentModel{}
+			db := utils.GetDB()
+			db.Last(&tmp)
+			myuser := users.UserModel{}
+			db.Where("ID=?", tmp.UserID).Find(&myuser)
+			student := StudentRe{
+				StudentID: tmp.StudentID,
+				UserID:    tmp.UserID,
+				RoomID:    tmp.RoomID,
+				UserName:  myuser.Username,
+				Email:     myuser.Email,
+				phone:     "",
+				RoomName:  "",
+				Level:     tmp.Level,
+				Ccid:      tmp.Ccid}
+			c.JSON(http.StatusOK, gin.H{"student": student})
+			return
+		}
+
+		rid, _ := strconv.Atoi(roomid)
+		var studentList []StudentRe
+		studentmodel := GetStudentModelList(rid)
+
 		db := utils.GetDB()
-		db.Last(&tmp)
-		myuser := users.UserModel{}
-		db.Where("ID=?", tmp.UserID).Find(&myuser)
-		student := StudentRe{
-			StudentID:tmp.StudentID,
-			UserID:tmp.UserID,
-			RoomID:tmp.RoomID,
-			UserName:myuser.Username,
-			Email:myuser.Email,
-			phone:"",
-			RoomName:"",
-			Level:tmp.Level,
-			Ccid:tmp.Ccid}
-		c.JSON(http.StatusOK, gin.H{"student":student})
-		return
-	}
+		myclassroom := classroom.ClassroomModel{}
+		db.Where("roomid=?", rid).Find(&myclassroom)
 
-	rid,_ := strconv.Atoi(roomid)
-	var studentList []StudentRe
-	studentmodel := GetStudentModelList(rid)
+		for _, tmp := range studentmodel {
+			myuser := users.UserModel{}
+			db.Where("ID=?", tmp.UserID).Find(&myuser)
+			student := StudentRe{
+				StudentID: tmp.StudentID,
+				UserID:    tmp.UserID,
+				RoomID:    tmp.RoomID,
+				UserName:  myuser.Username,
+				Email:     myuser.Email,
+				phone:     "",
+				RoomName:  myclassroom.Name,
+				Level:     tmp.Level,
+				Ccid:      tmp.Ccid}
+
+			studentList = append(studentList, student)
+		}
+
+		c.JSON(http.StatusOK, gin.H{"students": studentList})
+	}
+}
+
+func GetStudentCount(c *gin.Context) {
+	mlogger  := logp.NewLogger("student")
+	logger := mlogger.Named("get")
+
+	roomid := c.Query("rid")
+	var count uint
+	var studentmodel []StudentModel
+
+	logger.Infof("get the students, the classroom id is %s.",roomid)
 
 	db := utils.GetDB()
-	myclassroom := classroom.ClassroomModel{}
-	db.Where("roomid=?", rid).Find(&myclassroom)
-
-	for _, tmp := range studentmodel {
-		myuser := users.UserModel{}
-		db.Where("ID=?", tmp.UserID).Find(&myuser)
-		student := StudentRe{
-			StudentID:tmp.StudentID,
-			UserID:tmp.UserID,
-			RoomID:tmp.RoomID,
-			UserName:myuser.Username,
-			Email:myuser.Email,
-			phone:"",
-			RoomName:myclassroom.Name,
-			Level:tmp.Level,
-			Ccid:tmp.Ccid}
-
-		studentList = append(studentList, student)
+	/*分页处理，每页两条，取第二页内容*/
+	if (roomid != "") {
+		rid, _ := strconv.Atoi(roomid)
+		db.Where("roomid=?", rid).Find(&studentmodel).Count(&count)
+		c.JSON(http.StatusOK, gin.H{"count": count})
+		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"students":studentList})
+	db.Find(&studentmodel).Count(&count)
+	c.JSON(http.StatusOK, gin.H{"count": count})
+	return
 }
 
 func AddStudent(c *gin.Context) {

@@ -111,6 +111,7 @@ func (m Manager) webListen() {
 
 		tuna_v9 := tuna_v2.Group("/student")
 		tuna_v9.GET("/",student.GetStudent)
+		tuna_v9.GET("/count",student.GetStudentCount)
 		tuna_v9.POST("/add",student.AddStudent)
 		tuna_v9.POST("/delete",student.DeleteStudent)
 
